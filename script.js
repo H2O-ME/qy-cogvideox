@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // 添加自定义头像样式 - 这部分添加在函数最开始部分
+    const avatarStyle = document.createElement('style');
+    avatarStyle.textContent = `
+        .logo-icon {
+            background-image: url('https://img.picui.cn/free/2025/03/17/67d8459d88fbf.png') !important;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bot-avatar {
+            background-image: url('https://img.picui.cn/free/2025/03/17/67d8459d88fbf.png') !important;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    `;
+    document.head.appendChild(avatarStyle);
+    
     const chatContainer = document.getElementById('chat-container');
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-btn');
